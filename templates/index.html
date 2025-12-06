@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>一問一答</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<h1>一問一答ツール</h1>
+
+<div class="box">
+<label>科目：</label>
+<select id="subject">
+  <option value="社会">社会</option>
+  <option value="理科">理科</option>
+</select>
+<br><br>
+
+<label>回数：</label>
+<input id="start" type="number" min="1" style="width:80px;"> 〜
+<input id="end" type="number" min="1" style="width:80px;">
+<br><br>
+
+<label>出題順：</label>
+<select id="mode">
+<option value="order">昇順</option>
+<option value="random">ランダム</option>
+</select>
+
+<br><br>
+<button onclick="loadQuestions()">出題開始</button>
+</div>
+
+<div id="quiz" class="hidden">
+  <p id="unit"></p>
+  <p id="question"></p>
+  <button onclick="showAnswer()">答えを見る</button>
+  <p id="answer" class="hidden"></p>
+  <button onclick="next()">次へ</button>
+</div>
+
+<script src="/static/main.js"></script>
+</body>
+</html>
